@@ -28,26 +28,31 @@ const app = new Vue({
 
   data:{
     
-    task1: {
-      text: 'Fare la spesa',
-      done: false
-    },
-    task2: {
-      text: 'Portare il cane a spasso',
-      done: true
-    },
-    task3: {
-      text: 'Comprare il latte',
-      done: false
-    },
-    task4: {
-      text: 'Fare i compiti',
-      done: false
-    },
-    
+    tasks: [
+      {
+        text: 'Fare la spesa',
+        done: false
+      },
+      {
+        text: 'Portare il cane a spasso',
+        done: true
+      },
+      {
+        text: 'Comprare il latte',
+        done: false
+      },
+      {
+        text: 'Fare i compiti',
+        done: false
+      },
+    ]
   },
 
   methods: {
+
+    deleteTask(){
+      this.tasks.splice(index, 1);
+    }
 
   }
 

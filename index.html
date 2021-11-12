@@ -26,52 +26,14 @@
       
       <ul>
 
-        <li>
-          <p
-          @click="task1.done = !task1.done"
-          :class="{done : task1.done}"
-          >
-            {{task1.text}}
+        <li v-for="(task, index) in tasks">
+          <p @click="task.done = !task.done" 
+          :class="{done : task.done}">
+            {{task.text}}
           </p>
 
-          <i class="fas fa-times"></i>
-        </li>
+          <i @click="deleteTask(index)" class="fas fa-times"></i>
         
-        <li>
-          <p
-          @click="task2.done = !task2.done"
-          :class="{done : task2.done}"
-          >
-            {{task2.text}}
-          </p>
-
-          <i class="fas fa-times"></i>
-        </li>
-        
-
-
-        <li>
-          <p
-          @click="task3.done = !task3.done"
-          :class="{done : task3.done}"
-          >
-            {{task3.text}}
-          </p>
-
-          <i class="fas fa-times"></i>
-        </li>
-
-
-        
-        <li>
-          <p
-          @click="task4.done = !task4.done"
-          :class="{done : task4.done}"
-          >
-            {{task4.text}}
-          </p>
-
-          <i class="fas fa-times"></i>
         </li>
       
       </ul>
