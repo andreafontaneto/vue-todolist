@@ -3,3 +3,62 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#app{
+  width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#logo{
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#logo img{
+  width: 100%;
+}
+
+#app .top{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#app .top input{
+  width: 400px;
+  line-height: 40px;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+#app .top .btn{
+  width: 100px;
+  color: white;
+  line-height: 40px;
+  background-color: royalblue;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+
+#app .bottom ul{
+  list-style: none;
+}
+
+#app .bottom ul li{
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+}
+
+#app .bottom ul li:last-child{
+  border-bottom: none;
+}
