@@ -26,9 +26,30 @@ const app = new Vue({
 
   el: '#app',
 
-  data:
-  {
-    text: 'Fare la spesa',
-    done: false
+  data:{
+    
+    task1: {
+      text: 'Fare la spesa',
+      done: false
+    },
+    task2: {
+      text: 'Portare il cane a spasso',
+      done: true
+    },
+    task3: {
+      text: 'Comprare il latte',
+      done: false
+    },
+    task4: {
+      text: 'Fare i compiti',
+      done: false
+    },
+    
+  },
+
+  methods: {
+
   }
+
+  
 })
