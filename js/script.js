@@ -44,17 +44,27 @@ const app = new Vue({
       {
         text: 'Fare i compiti',
         done: false
-      },
-    ]
+      }
+    ],
+
+    emptyTask: {
+      text: '',
+      done: false
+    }
   },
 
   methods: {
 
     deleteTask(index){
       this.tasks.splice(index, 1);
+    },
+
+    addTask(){
+      this.tasks.push(this.emptyTask);
+      this.emptyTask.text = '';
     }
 
   }
 
   
-})
+});
