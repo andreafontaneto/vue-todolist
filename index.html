@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.css" integrity="sha512-qYgnDNlu2lefkHtLZMk3Mj7BJb/Cg/lIyydO9eJAvgqtjU08KVeJqEBAaB8VUVDCRkdAwgzS04Jh6g4AtIcThw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css">
   <title>VUE To Do List</title>
 </head>
@@ -22,26 +23,59 @@
     </div>
 
     <div class="bottom">
+      
       <ul>
-        <li 
-        @click="task1.done = !task1.done"
-        :class="{done : task1.done}">
-          {{task1.text}}
+
+        <li>
+          <p
+          @click="task1.done = !task1.done"
+          :class="{done : task1.done}"
+          >
+            {{task1.text}}
+          </p>
+
+          <i class="fas fa-times"></i>
         </li>
-        <li 
-        @click="task2.done = !task2.done" 
-        :class="{done : task2.done}">
-          {{task2.text}}
+        
+        <li>
+          <p
+          @click="task2.done = !task2.done"
+          :class="{done : task2.done}"
+          >
+            {{task2.text}}
+          </p>
+
+          <i class="fas fa-times"></i>
         </li>
-        <li @click="task3.done = !task3.done" 
-        :class="{done : task3.done}">
-          {{task3.text}}
+        
+
+
+        <li>
+          <p
+          @click="task3.done = !task3.done"
+          :class="{done : task3.done}"
+          >
+            {{task3.text}}
+          </p>
+
+          <i class="fas fa-times"></i>
         </li>
-        <li @click="task4.done = !task4.done" 
-        :class="{done : task4.done}">
-          {{task4.text}}
+
+
+        
+        <li>
+          <p
+          @click="task4.done = !task4.done"
+          :class="{done : task4.done}"
+          >
+            {{task4.text}}
+          </p>
+
+          <i class="fas fa-times"></i>
         </li>
+      
       </ul>
+    
     </div>
 
   </div>

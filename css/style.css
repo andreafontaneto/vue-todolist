@@ -67,6 +67,8 @@ body{
   padding: 10px 0;
   border-bottom: 1px solid lightgray;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }
 
 #app .bottom ul li:last-child{
