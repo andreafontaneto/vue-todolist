@@ -27,7 +27,7 @@
       <button 
       @click="addTask"
       class="btn">Aggiungi Task</button>
-      
+
     </div>
 
     <div class="bottom">
@@ -40,7 +40,7 @@
             {{task.text}}
           </p>
 
-          <i @click="deleteTask" class="fas fa-times"></i>
+          <i @click="deleteTask(index)" class="fas fa-times"></i>
         
         </li>
       
