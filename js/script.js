@@ -50,6 +50,9 @@ const app = new Vue({
 
     // emptyTaskText è la proprietà dell'oggetto non ancora creato
     emptyTaskText: '',
+
+    //messaggio di errore input caratteri
+    errorMsg: false
   },
 
   methods: {
@@ -59,13 +62,24 @@ const app = new Vue({
     },
 
     addTask(){
-      // pusho un NUOVO OGGETTO con proprietà "text" e valore "emptyTaskText"
-      this.tasks.push({
-        text: this.emptyTaskText,
-        done: false
-      });
 
-      this.emptyTaskText = '';
+      if(this.emptyTaskText.length <= 2){
+         
+        this.errorMsg = true;
+        this.emptyTaskText = '';
+        setTimeout(()=>{
+          this.errorMsg = false;
+        }, 3000)
+
+      } else {
+        // pusho un NUOVO OGGETTO con proprietà "text" e valore "emptyTaskText"
+        this.tasks.push({
+          text: this.emptyTaskText,
+          done: false
+        });
+  
+        this.emptyTaskText = '';
+      }
     }
 
   }

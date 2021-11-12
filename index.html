@@ -15,14 +15,19 @@
     <div id="logo">
       <img src="img/boolean-logo.png" alt="">
     </div>
+    
+    <h3 v-if="errorMsg">Errore! Digitare una task valida</h3>
 
     <div class="top">
+
       <input v-model="emptyTaskText" 
       @keyup.enter="addTask"
       type="text" placeholder="Cosa devo fare?">
+      
       <button 
       @click="addTask"
       class="btn">Aggiungi Task</button>
+      
     </div>
 
     <div class="bottom">
