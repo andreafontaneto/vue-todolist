@@ -44,13 +44,12 @@ const app = new Vue({
       {
         text: 'Fare i compiti',
         done: false
-      }
+      },
     ],
 
-    emptyTask: {
-      text: '',
-      done: false
-    }
+
+    // emptyTaskText è la proprietà dell'oggetto non ancora creato
+    emptyTaskText: '',
   },
 
   methods: {
@@ -60,8 +59,13 @@ const app = new Vue({
     },
 
     addTask(){
-      this.tasks.push(this.emptyTask);
-      this.emptyTask.text = '';
+      // pusho un NUOVO OGGETTO con proprietà "text" e valore "emptyTaskText"
+      this.tasks.push({
+        text: this.emptyTaskText,
+        done: false
+      });
+
+      this.emptyTaskText = '';
     }
 
   }
